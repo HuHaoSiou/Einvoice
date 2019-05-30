@@ -6,7 +6,7 @@
 
   <ItemGroup>
     <Folder Include="Models\EInv\v32\" />
-    <Folder Include="Services\" />
+    <Folder Include="Services\Track\" />
   </ItemGroup>
 
   <ItemGroup>
