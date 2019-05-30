@@ -1,6 +1,20 @@
-<h2>電子發票加值中心/客戶端/模組</h2>
+###EInvoice Service Side & Client
+-------------------
 
-執行環境:
--.Net Core 2.2
--Windows 10(Build 1803)
+####Einvorment:
++   .Net Core 2.2
++   Windows 10(Build 1803)
+
+###Sub Project
+-------------------
++	EInvCenter - 加值中心Web服務(.net Core MVC)
++	EInvClient - 客戶端(UWP)
++	EInvLib - 商業邏輯模組
++	EInvMigration-資料庫遷移執行專案
+
+
+
+	
+
+
 
