@@ -5,7 +5,7 @@ using System.Text;
 
 namespace EInvLib.Models.EInvCenter
 {
-    class FlowOrder
+    public class FlowOrder
     {
         [Key]
         public Guid Id { get; set; }

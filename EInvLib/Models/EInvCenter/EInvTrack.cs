@@ -8,7 +8,7 @@ namespace EInvLib.Models.EInvCenter
     /// <summary>
     /// 電子發票字軌
     /// </summary>
-    class EInvTrack
+    public class EInvTrack
     {
         /// <summary>
         /// 主索引

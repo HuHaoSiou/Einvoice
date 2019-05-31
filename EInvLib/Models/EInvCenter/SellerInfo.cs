@@ -6,7 +6,7 @@ using System.Text;
 
 namespace EInvLib.Models.EInvCenter
 {
-    class SellerInfo
+    public class SellerInfo
     {
         [Key]
         public long Id { get; set; }

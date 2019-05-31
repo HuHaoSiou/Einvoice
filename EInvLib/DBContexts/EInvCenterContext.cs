@@ -14,9 +14,21 @@ namespace EInvLib.DBContexts
         {
             optionsBuilder.UseSqlServer(this.connString);
         }
-
+        /// <summary>
+        /// 金流訂單
+        /// </summary>
         public DbSet<FlowOrder> FlowOrders { get; set; }
-
+        /// <summary>
+        /// 配號
+        /// </summary>
         public DbSet<InvoiceAssignNo> InvoiceAssignNos { get; set; }
+        /// <summary>
+        /// 會員
+        /// </summary>
+        public DbSet<Member> Members { get; set; }
+        /// <summary>
+        /// 營業人資訊
+        /// </summary>
+        public DbSet<SellerInfo> SellerInfos { get; set; }
     }
 }
