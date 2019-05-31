@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace EInvMigration
+namespace DBMigration
 {
     class Program
     {

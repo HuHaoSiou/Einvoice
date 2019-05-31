@@ -10,14 +10,14 @@ namespace EInvLib.Models.EInvCenter
     {
         [Key]
         public long Id { get; set; }
-        [Key, Required]
+        [Required]
         public string Name { get; set; }
         [Required]
         public string BAN { get; set; }
         [Required]
         public string EMail { get; set; }
 
-        [ForeignKey("MemberRefId")]
-        public Member Owner;
+        //[ForeignKey("MemberRefId")]
+        //public Member Owner;
     }
 }

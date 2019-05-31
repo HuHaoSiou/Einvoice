@@ -7,20 +7,18 @@ using System.Text;
 
 namespace EInvLib.Models.EInvCenter
 {
-    public class Member : IdentityUser
-    {
-        [Key]
-        public long Id { get; set; }
-        [Required]
-        public string Account { get; set; }
-        [Required]
-        public string Password { get; set; }
-        [Required]
-        public string EMail { get; set; }
-        public int IsActived { get; set; }
+    //public class Member : IdentityUser
+    //{
+    //    [Required]
+    //    public string Account { get; set; }
+    //    [Required]
+    //    public string Password { get; set; }
+    //    [Required]
+    //    public string EMail { get; set; }
+    //    public int IsActived { get; set; }
 
-        [InverseProperty("SellerInfo")]
-        public ICollection<SellerInfo> Sellers;
+    //    [InverseProperty("SellerInfo")]
+    //    public ICollection<SellerInfo> Sellers;
 
-    }
+    //}
 }

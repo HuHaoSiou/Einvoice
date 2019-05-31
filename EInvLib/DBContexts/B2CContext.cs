@@ -7,7 +7,7 @@ using EInv.Models.EInv.v32.B2C.EInvoice;
 using EInv.Models.EInv.v32.B2C.Allowance;
 namespace EInvLib.DBContexts
 {
-    class B2CContext : DbContext
+    public class B2CContext : DbContext
     {
         protected string connString = @"Data Source=ILLUS-DESKTOP2\SQLEXPRESS;Initial Catalog=testingDB;User ID=dev01;Password=kn4es1uL;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
