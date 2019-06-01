@@ -1,0 +1,112 @@
+﻿
+@{
+    ViewData["Title"] = "Query";
+}
+@model  EInvLib.Models.EInv.v32.B2C.EInvoice.Invoice
+<h1>Query</h1>
+
+<div class="container" style="max-width:21cm;">
+
+    <div class="EInv-container" style="width:5.7cm; height:9cm; border:solid; border-width:2px; border-color:black;margin:0 auto;">
+        @try
+        {
+            <img src="~/Content/Images/EinvLogo/@ViewBag.SellerInfo.發票抬頭圖檔" style="text-align: center; margin-top:0cm; width:5.7cm;" />
+        }
+        catch
+        {
+            <img src="~/Content/Images/EinvLogo/CW_EinvLogo_394x102.bmp" style="text-align: center; margin-top:0cm; width:5.7cm;" />
+        }
+        <div class="Contant-top" style="text-align: center">
+            <div class="" id="Title" style="margin-top:0.5cm;">
+                <span id="lblPrintTitle" style="font-size: 24px; font-family: 新細明體; font-weight: bold;">電子發票證明聯</span>
+            </div>
+            <span id="_lblInvYear" style="font-family:Microsoft YaHei;font-size:26px;font-weight:bold;">Year</span>
+            <span id="lblYear" style="font-family:Microsoft YaHei;font-size:26px;font-weight:bold;">年</span>
+            <span id="_lblInvPeriod" style="font-family:Microsoft YaHei;font-size:26px;font-weight:bold;">Month</span>
+            <span id="lblMonth" style="font-family:Microsoft YaHei;font-size:26px;font-weight:bold;">月</span>
+            <div class="" id="InvNo" style="margin-top:1px;">
+                <span id="_lblInvNo" style="font-family:Microsoft YaHei;font-size:26px;font-weight:bold;width: 4.9cm;">@Model.Main.InvoiceNumber</span>
+            </div>
+            <div class="" id="Dateime" style="margin: -10px 0 0 -80px;">
+                <span id="_lblPrintDateTime" style="font-size:12px;">@Model.Main.InvoiceDate</span>
+            </div>
+        </div>
+        <div class="row" id="">
+            <div class="row" id="" style="position:relative;margin: -10px auto;padding: 0 5px 0 10px;">
+                <div class="" id="" style="position:absolute;margin-left:15px">
+                    <span id="Label21" style="font-size:10px;">隨機碼:</span>&nbsp;<span id="_lblRndNumber" style="font-size:10px;">@Model.Main.RandomNumber</span>
+                </div>
+                <div class="" id="" style="margin-left:3cm;">
+                    <span id="Label2" style="font-size:10px;">總計:</span>&nbsp;<span id="_lblTotalAmt" style="font-size:10px;">@Model.Amount.TotalAmount</span>
+                </div>
+            </div>
+            <div class="row" id="" style="position:relative;margin: 0 auto;padding: 0 5px 0 10px;">
+                <div class="" id="" style="position:absolute;margin-left:15px">
+                    <span id="Label1" style="font-size:10px;">賣方</span>
+                    <span id="lbTaxNoP" style="font-size:10px;">@Model.Main.Seller.Identifier</span>
+                </div>
+                <div class="" id="" style="margin-left:3cm;">
+                    @if (Model.Main.Seller.Identifier != "0000000000")
+                    {
+                        <span id="lbTaxNoB" style="font-size:10px;">買方</span>
+                        <span id="" style="font-size:10px">@Model.Main.Seller.Identifier</span>
+                    }
+                    else
+                    {
+                        <br />
+                    }
+                </div>
+            </div>
+
+        </div>
+        <div class="" id="" style="position: relative;margin: 0px 0px 0px 10px;">
+            @*<img id="imgBarcode" src="@Url.Action("Barcode","EInvCenter", new{ BCType=EinvBarcode.BarCodeType.Code39})" style="height:0.5cm; width: 5cm; text-align: center " />*@
+        </div>
+        <div class="row" id="" style="position:relative;margin: 5px auto;padding: 0 5px 0 10px;">
+            <div class="" id="" style="position:absolute;margin-left:2px">
+                @*<img id="imgLeftQRCodeP" src="@Url.Action("Barcode","EInvCenter", new{ BCType=EinvBarcode.BarCodeType.QR_Left})" align="middle" style="height:76px;width:76px;" />*@
+
+            </div>
+            <div class="" id="" style="margin-left:3cm;">
+                @*<img id="imgRightQRCodeP" src="@Url.Action("Barcode","EInvCenter", new{ BCType=EinvBarcode.BarCodeType.QR_Right})" align="middle" style="height:76px;width:76px;" />*@
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>品名</th>
+                        <th>數量</th>
+                        <th>單價</th>
+                        <th>小計</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.Details)
+                    {
+                        <tr>
+                            <td>@item.Description</td>
+                            <td>@item.Quantity</td>
+                            <td>@item.UnitPrice</td>
+                            <td>@item.Amount.ToString()</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="row hidden-print">
+        <div class="col-md-12">
+            @*<a class="btn btn-default" href="@Url.Action("Query","EInvCenter", new { InvNo=Model.發票號碼 ,RndNo=Model.隨機碼 ,Type=25})">切換格式</a>*@
+        </div>
+        <div class="col-md-12">
+            <ul class="list-group">
+                <li class="list-group-item">二聯或三聯發票需更正者請於五日內辦理，逾期恕不受裡。</li>
+                <li class="list-group-item">索取發票正本請洽詢全葳資訊客服</li>
+            </ul>
+        </div>
+    </div>
+</div>

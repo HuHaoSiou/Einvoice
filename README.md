@@ -13,10 +13,13 @@
 -------------------
 +	EInvCenter - 加值中心Web服務(.net Core MVC)
 +	EInvClient - 客戶端(UWP)
-+	EInvLibs - 商業邏輯模組
++	Libs - 商業邏輯模組
 +	DBMigration-資料庫遷移執行專案
 
-
+###部屬服務
+-------------------
+>將DBMigration 設定為起始專案，並將DBContext內中的連線字串修改為目標資料庫。
+>開啟套件管理主控台，鍵入update-database即可建立資料表。
 
 	
 

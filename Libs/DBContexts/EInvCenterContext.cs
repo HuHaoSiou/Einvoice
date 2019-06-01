@@ -1,4 +1,4 @@
-﻿using EInv.Models.EInv.v32.B2P.E0501;
+﻿using EInvLib.Models.EInv.v32.B2P.E0501;
 using EInvLib.Models.EInvCenter;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
