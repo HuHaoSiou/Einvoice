@@ -13,8 +13,8 @@
 -------------------
 +	EInvCenter - 加值中心Web服務(.net Core MVC)
 +	EInvClient - 客戶端(UWP)
-+	EInvLib - 商業邏輯模組
-+	EInvMigration-資料庫遷移執行專案
++	EInvLibs - 商業邏輯模組
++	DBMigration-資料庫遷移執行專案
 
 
 
