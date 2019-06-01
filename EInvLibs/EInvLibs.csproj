@@ -1,0 +1,646 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{474A1D7E-A10E-4CF3-8B47-0221A37E3E02}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EInvLibs</RootNamespace>
+    <AssemblyName>EInvLibs</AssemblyName>
+    <DefaultLanguage>zh-TW</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.17763.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <GenerateLibraryLayout>true</GenerateLibraryLayout>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <PlatformTarget>ARM</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <PlatformTarget>ARM</PlatformTarget>
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM64'">
+    <PlatformTarget>ARM64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM64'">
+    <PlatformTarget>ARM64</PlatformTarget>
+    <OutputPath>bin\ARM64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="DBContexts\B2CContext.cs" />
+    <Compile Include="DBContexts\EInvCenterContext.cs" />
+    <Compile Include="Migrations\20190530012516_Init.cs" />
+    <Compile Include="Migrations\20190530012516_Init.Designer.cs">
+      <DependentUpon>20190530012516_Init.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20190530022908_B2CAllowance.cs" />
+    <Compile Include="Migrations\20190530022908_B2CAllowance.Designer.cs">
+      <DependentUpon>20190530022908_B2CAllowance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20190530023150_B2CInvoice.cs" />
+    <Compile Include="Migrations\20190530023150_B2CInvoice.Designer.cs">
+      <DependentUpon>20190530023150_B2CInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\B2CContextModelSnapshot.cs" />
+    <Compile Include="Migrations\EInvCenter\20190530025645_E0501.cs" />
+    <Compile Include="Migrations\EInvCenter\20190530025645_E0501.Designer.cs">
+      <DependentUpon>20190530025645_E0501.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\EInvCenter\EInvCenterContextModelSnapshot.cs" />
+    <Compile Include="Models\EInvCenter\FlowOrder.cs" />
+    <Compile Include="Models\EInvCenter\Member.cs" />
+    <Compile Include="Models\EInvCenter\SellerInfo.cs" />
+    <Compile Include="Models\EInv\v32\A0101.cs" />
+    <Compile Include="Models\EInv\v32\A0102.cs" />
+    <Compile Include="Models\EInv\v32\A0201.cs" />
+    <Compile Include="Models\EInv\v32\A0202.cs" />
+    <Compile Include="Models\EInv\v32\A0301.cs" />
+    <Compile Include="Models\EInv\v32\A0302.cs" />
+    <Compile Include="Models\EInv\v32\A0401.cs" />
+    <Compile Include="Models\EInv\v32\A0501.cs" />
+    <Compile Include="Models\EInv\v32\A0601.cs" />
+    <Compile Include="Models\EInv\v32\B0101.cs" />
+    <Compile Include="Models\EInv\v32\B0102.cs" />
+    <Compile Include="Models\EInv\v32\B0201.cs" />
+    <Compile Include="Models\EInv\v32\B0202.cs" />
+    <Compile Include="Models\EInv\v32\B0401.cs" />
+    <Compile Include="Models\EInv\v32\B0501.cs" />
+    <Compile Include="Models\EInv\v32\C0401.cs" />
+    <Compile Include="Models\EInv\v32\C0501.cs" />
+    <Compile Include="Models\EInv\v32\C0701.cs" />
+    <Compile Include="Models\EInv\v32\D0401.cs" />
+    <Compile Include="Models\EInv\v32\D0501.cs" />
+    <Compile Include="Models\EInv\v32\E0401.cs" />
+    <Compile Include="Models\EInv\v32\E0402.cs" />
+    <Compile Include="Models\EInv\v32\E0501.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\Flow\IFlowService.cs" />
+    <Compile Include="Services\Flow\IFlowServiceBase.cs" />
+    <Compile Include="Services\Mail\IMailService.cs" />
+    <Compile Include="Services\Mail\MailService.cs" />
+    <Compile Include="Services\Track\ITrackService.cs" />
+    <Compile Include="Services\Track\TrackService.cs" />
+    <Compile Include="Services\UserManage\IUserManageService.cs" />
+    <Compile Include="Services\UserManage\UserManageService.cs" />
+    <EmbeddedResource Include="Properties\EInvLibs.rd.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore">
+      <Version>2.2.0</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore">
+      <Version>2.2.4</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer">
+      <Version>2.2.4</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
+      <Version>6.2.8</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Models\EInvXSD\v26\A0101.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v26\A0102.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v26\A0201.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v26\A0202.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v26\A0301.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v26\A0302.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v26\A0401.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v26\A0501.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v26\A0601.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v26\A1101.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v26\A1401.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v26\B0101.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v26\B0102.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v26\B0201.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v26\B0202.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v26\B0301.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v26\B0401.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v26\B1101.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v26\B1301.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v26\DescriptionType.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v27\A0101.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v27\A0102.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v27\A0201.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v27\A0202.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v27\A0301.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v27\A0302.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v27\A0401.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v27\A0501.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v27\A0601.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v27\A1101.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v27\A1401.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v27\B0101.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v27\B0102.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v27\B0201.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v27\B0202.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v27\B0301.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v27\B0401.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v27\B1101.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v27\B1301.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v27\DescriptionType.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v28\A0101.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v28\A0102.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v28\A0201.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v28\A0202.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v28\A0301.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v28\A0302.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v28\A0401.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v28\A0501.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v28\A0601.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v28\A1101.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v28\A1401.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v28\B0101.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v28\B0102.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v28\B0201.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v28\B0202.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v28\B0301.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v28\B0401.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v28\B1101.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v28\B1301.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v28\DescriptionType.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v30\A0101.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v30\A0102.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v30\A0201.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v30\A0202.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v30\A0301.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v30\A0302.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v30\A0401.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v30\A0501.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v30\A0601.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v30\A1101.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v30\A1401.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v30\B0101.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v30\B0102.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v30\B0201.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v30\B0202.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v30\B0401.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v30\B0501.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v30\B1101.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v30\B1401.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v30\C0401.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v30\C0501.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v30\C0601.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v30\C0701.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v30\D0401.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v30\D0501.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v30\E0401.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v30\E0402.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v30\GenericType_3.0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v30\InvoiceEnvelope.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v31\A0101.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v31\A0102.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v31\A0201.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v31\A0202.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v31\A0301.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v31\A0302.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v31\A0401.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v31\A0501.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v31\A0601.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v31\A1101.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v31\A1401.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v31\B0101.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v31\B0102.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v31\B0201.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v31\B0202.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v31\B0401.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v31\B0501.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v31\B1101.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v31\B1401.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v31\C0401.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v31\C0501.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v31\C0701.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v31\D0401.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v31\D0501.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v31\E0401.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v31\E0402.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v31\GenericType_3.1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v31\InvoiceEnvelope.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v32\A0101.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v32\A0102.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v32\A0201.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v32\A0202.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v32\A0301.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v32\A0302.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v32\A0401.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v32\A0501.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v32\A0601.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v32\B0101.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v32\B0102.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v32\B0201.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v32\B0202.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v32\B0401.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v32\B0501.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v32\C0401.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v32\C0501.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v32\C0701.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v32\D0401.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v32\D0501.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v32\E0401.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v32\E0402.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v32\E0501.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v32\GenericResult_3.0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v32\GenericType_3.2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v32\InvoiceEnvelope.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v32\ProcessResult.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\EInvXSD\v32\SummaryResult.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Models\EInvXSD\v32\xsd.exe" />
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

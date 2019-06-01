@@ -14,7 +14,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\EInvCenter\EInvCenter.csproj" />
-    <ProjectReference Include="..\EInvLib\EInvLib.csproj" />
   </ItemGroup>
 
 </Project>

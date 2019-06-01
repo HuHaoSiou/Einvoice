@@ -1,0 +1,30 @@
+﻿<Page
+    x:Class="EInvUWPClient.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:EInvUWPClient"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <NavigationView>
+            <NavigationView.MenuItems>
+                <AutoSuggestBox x:Name="MainSuggestBox" PlaceholderText="搜尋" QueryIcon="Find" Width="200"
+                TextChanged="MainSuggestBox_TextChanged"
+                QuerySubmitted="MainSuggestBox_QuerySubmitted"
+                SuggestionChosen="MainSuggestBox_SuggestionChosen"/>
+            </NavigationView.MenuItems>
+            
+            <NavigationViewItem x:Name="Make">
+                <NavigationViewItem.Icon>
+                    <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE7C3;"/>
+                </NavigationViewItem.Icon>
+                <TextBlock Tag="Nav_Make">開立</TextBlock>
+            </NavigationViewItem>
+            
+        </NavigationView>
+
+    </Grid>
+</Page>
