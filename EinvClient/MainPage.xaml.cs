@@ -12,7 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-
+using EInvLib.DBContexts;
 // 空白頁項目範本已記錄在 https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x404
 
 namespace EinvClient
@@ -22,7 +22,6 @@ namespace EinvClient
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        
         public MainPage()
         {
             this.InitializeComponent();

@@ -181,9 +181,9 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\EInvLibs\EInvLibs.csproj">
-      <Project>{474a1d7e-a10e-4cf3-8b47-0221a37e3e02}</Project>
-      <Name>EInvLibs</Name>
+    <ProjectReference Include="..\Libs\Libs.csproj">
+      <Project>{12ac569c-62f0-4fc7-9e11-72b592ff531f}</Project>
+      <Name>Libs</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">

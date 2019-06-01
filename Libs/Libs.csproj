@@ -1,0 +1,467 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Migrations\20190530012516_Init.Designer.cs">
+      <DependentUpon>20190530012516_Init.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Migrations\20190530022908_B2CAllowance.Designer.cs">
+      <DependentUpon>20190530022908_B2CAllowance.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Migrations\20190530023150_B2CInvoice.Designer.cs">
+      <DependentUpon>20190530023150_B2CInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Migrations\EInvCenter\20190530025645_E0501.Designer.cs">
+      <DependentUpon>20190530025645_E0501.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Models\EInvXSD\v26\A0101.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v26\A0102.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v26\A0201.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v26\A0202.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v26\A0301.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v26\A0302.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v26\A0401.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v26\A0501.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v26\A0601.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v26\A1101.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v26\A1401.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v26\B0101.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v26\B0102.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v26\B0201.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v26\B0202.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v26\B0301.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v26\B0401.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v26\B1101.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v26\B1301.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v26\DescriptionType.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v27\A0101.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v27\A0102.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v27\A0201.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v27\A0202.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v27\A0301.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v27\A0302.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v27\A0401.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v27\A0501.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v27\A0601.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v27\A1101.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v27\A1401.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v27\B0101.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v27\B0102.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v27\B0201.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v27\B0202.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v27\B0301.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v27\B0401.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v27\B1101.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v27\B1301.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v27\DescriptionType.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v28\A0101.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v28\A0102.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v28\A0201.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v28\A0202.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v28\A0301.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v28\A0302.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v28\A0401.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v28\A0501.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v28\A0601.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v28\A1101.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v28\A1401.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v28\B0101.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v28\B0102.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v28\B0201.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v28\B0202.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v28\B0301.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v28\B0401.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v28\B1101.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v28\B1301.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v28\DescriptionType.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v30\A0101.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v30\A0102.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v30\A0201.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v30\A0202.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v30\A0301.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v30\A0302.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v30\A0401.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v30\A0501.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v30\A0601.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v30\A1101.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v30\A1401.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v30\B0101.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v30\B0102.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v30\B0201.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v30\B0202.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v30\B0401.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v30\B0501.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v30\B1101.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v30\B1401.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v30\C0401.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v30\C0501.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v30\C0601.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v30\C0701.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v30\D0401.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v30\D0501.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v30\E0401.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v30\E0402.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v30\GenericType_3.0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v30\InvoiceEnvelope.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v31\A0101.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v31\A0102.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v31\A0201.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v31\A0202.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v31\A0301.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v31\A0302.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v31\A0401.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v31\A0501.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v31\A0601.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v31\A1101.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v31\A1401.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v31\B0101.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v31\B0102.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v31\B0201.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v31\B0202.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v31\B0401.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v31\B0501.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v31\B1101.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v31\B1401.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v31\C0401.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v31\C0501.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v31\C0701.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v31\D0401.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v31\D0501.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v31\E0401.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v31\E0402.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v31\GenericType_3.1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v31\InvoiceEnvelope.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v32\A0101.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v32\A0102.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v32\A0201.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v32\A0202.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v32\A0301.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v32\A0302.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v32\A0401.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v32\A0501.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v32\A0601.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v32\B0101.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v32\B0102.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v32\B0201.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v32\B0202.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v32\B0401.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v32\B0501.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v32\C0401.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v32\C0501.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v32\C0701.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v32\D0401.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v32\D0501.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v32\E0401.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v32\E0402.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v32\E0501.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v32\GenericResult_3.0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v32\GenericType_3.2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v32\InvoiceEnvelope.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v32\ProcessResult.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Models\EInvXSD\v32\SummaryResult.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+
+</Project>
