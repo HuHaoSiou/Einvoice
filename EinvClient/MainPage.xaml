@@ -29,7 +29,7 @@
                     <NavigationViewItem.Icon>
                         <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE7C3;"/>
                     </NavigationViewItem.Icon>
-                    <TextBlock Tag="Nav_Cancel">取消</TextBlock>
+                    <TextBlock Tag="Nav_Cancel">作廢</TextBlock>
                 </NavigationViewItem>
 
                 <NavigationViewItem x:Name="Report">

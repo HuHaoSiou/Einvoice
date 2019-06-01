@@ -10,6 +10,34 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <NavigationView PaneDisplayMode="Top">
+            <NavigationView.MenuItems>
+                <NavigationViewItem>
+                    <TextBlock>
+                        銷售統計
+                    </TextBlock>
+                </NavigationViewItem>
+
+                <NavigationViewItem>
+                    <TextBlock>
+                        區域統計
+                    </TextBlock>
+                </NavigationViewItem>
+
+                <NavigationViewItem>
+                    <TextBlock>
+                        Item3
+                    </TextBlock>
+                </NavigationViewItem>
+
+                <NavigationViewItem>
+                    <TextBlock>
+                        Item4
+                    </TextBlock>
+                </NavigationViewItem>
+            </NavigationView.MenuItems>
+        </NavigationView>
+        
         <controls:DataGrid x:Name="All">
             
         </controls:DataGrid>
