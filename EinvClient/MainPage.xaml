@@ -10,13 +10,14 @@
 
     <Grid>
 
-        <NavigationView PaneTitle="CompanyName" x:Name="MainNavi" ItemInvoked="NavigationView_ItemInvoked">
+        <NavigationView x:Name="MainNavi" ItemInvoked="NavigationView_ItemInvoked">
             
             <NavigationView.MenuItems>
                 <AutoSuggestBox PlaceholderText="搜尋" QueryIcon="Find" Width="200"
                 TextChanged="AutoSuggestBox_TextChanged"
                 QuerySubmitted="AutoSuggestBox_QuerySubmitted"
-                SuggestionChosen="AutoSuggestBox_SuggestionChosen"/>
+                SuggestionChosen="AutoSuggestBox_SuggestionChosen"
+/>
                 
                 <NavigationViewItem x:Name="Make">
                     <NavigationViewItem.Icon>
@@ -41,7 +42,8 @@
 
             </NavigationView.MenuItems>
             <NavigationView.PaneFooter>
-                <NavigationViewItem Icon="Contact" Content="User" Tag="User"/>
+                <NavigationViewItem Icon="Contact" Tag="User">
+                </NavigationViewItem>
             </NavigationView.PaneFooter>
             <Frame x:Name="MainFrame"/>
         </NavigationView>

@@ -66,5 +66,10 @@ namespace EinvClient
         {
 
         }
+
+        private void MainFrame_Navigated(object sender, NavigationEventArgs e)
+        {
+
+        }
     }
 }

@@ -29,6 +29,20 @@ namespace EinvClient
             this.InitializeComponent();
             this._Context = new EInvCenterContext();
         }
+        private void CancelButton_Click(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void SaveButton_Click(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void AddPhotoButton_Click(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
 
     }
 }
