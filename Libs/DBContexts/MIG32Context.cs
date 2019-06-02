@@ -7,12 +7,14 @@ using EInvLib.Models.EInv.v32.B2C.EInvoice;
 using EInvLib.Models.EInv.v32.B2C.Allowance;
 namespace EInvLib.DBContexts
 {
-    public class B2CContext : DbContext
+    public class Mig32ontext : DbContext
     {
-        protected string connString = @"Data Source=ILLUS-DESKTOP2\SQLEXPRESS;Initial Catalog=testingDB;User ID=dev01;Password=kn4es1uL;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(this.connString);
+            if (!optionsBuilder.IsConfigured)
+            {
+                optionsBuilder.UseSqlServer(Configs.ConnString_Mig32Context, builder => builder.MigrationsAssembly("Mig32"));
+            }
         }
 
         public DbSet<Invoice> Invoices { get; set; }

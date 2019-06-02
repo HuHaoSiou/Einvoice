@@ -8,6 +8,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Xml.Serialization;
 
 // 
@@ -23,8 +26,11 @@ namespace EInvLib.Models.EInv.v32.B2P.E0402
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:GEINV:eInvoiceMessage:E0402:3.2")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:GEINV:eInvoiceMessage:E0402:3.2", IsNullable = false)]
+    [Table("E0402", Schema = "EInv")]
     public partial class BranchTrackBlank
     {
+        [Key]
+        public Guid Id { get; set; }
 
         private Main mainField;
 
@@ -64,8 +70,11 @@ namespace EInvLib.Models.EInv.v32.B2P.E0402
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:GEINV:eInvoiceMessage:E0402:3.2")]
+    [Table("E0402_Main", Schema = "EInv")]
     public partial class Main
     {
+        [Key]
+        public Guid Id { get; set; }
 
         private string headBanField;
 
@@ -189,8 +198,11 @@ namespace EInvLib.Models.EInv.v32.B2P.E0402
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:GEINV:eInvoiceMessage:E0402:3.2")]
+    [Table("E0402_DetailsBranchTrackBlankItem", Schema = "EInv")]
     public partial class DetailsBranchTrackBlankItem
     {
+        [Key]
+        public Guid Id { get; set; }
 
         private string invoiceBeginNoField;
 

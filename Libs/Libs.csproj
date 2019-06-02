@@ -464,4 +464,8 @@
     </None>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Services\EInvoice\v32\" />
+  </ItemGroup>
+
 </Project>

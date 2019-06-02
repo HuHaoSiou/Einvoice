@@ -9,8 +9,8 @@ namespace EInvCenter.Controllers
 {
     public class EInvoiceController : Controller
     {
-        protected B2CContext _B2CContext;
-        public EInvoiceController(B2CContext newContext)
+        protected Mig32ontext _B2CContext;
+        public EInvoiceController(Mig32ontext newContext)
         {
             this._B2CContext = newContext;
         }

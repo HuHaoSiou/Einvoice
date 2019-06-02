@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace EInvLib.Migrations
 {
-    [DbContext(typeof(B2CContext))]
+    [DbContext(typeof(Mig32ontext))]
     partial class B2CContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

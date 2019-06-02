@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace EInvLib.Migrations
 {
-    [DbContext(typeof(B2CContext))]
+    [DbContext(typeof(Mig32ontext))]
     [Migration("20190530012516_Init")]
     partial class Init
     {

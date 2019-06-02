@@ -1,5 +1,6 @@
 ﻿using EInvLib.Models.EInv.v32.B2P.E0501;
 using EInvLib.Models.EInvCenter;
+using EInvLib;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -10,12 +11,14 @@ namespace EInvLib.DBContexts
 {
     public class EInvCenterContext : IdentityDbContext
     {
-        protected string connString = @"Data Source=ILLUS-DESKTOP2\SQLEXPRESS;Initial Catalog=testingDB;User ID=dev01;Password=kn4es1uL;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
         public EInvCenterContext() { }
         public EInvCenterContext(DbContextOptions<EInvCenterContext> options):base(options){}
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(this.connString, b => b.MigrationsAssembly("EInvCenter"));
+            if (!optionsBuilder.IsConfigured)
+            {
+                optionsBuilder.UseSqlServer(Configs.ConnString_EInvCenterContext, builder => builder.MigrationsAssembly("EInvCenter"));
+            }
         }
         /// <summary>
         /// 金流訂單
