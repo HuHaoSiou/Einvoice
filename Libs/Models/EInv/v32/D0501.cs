@@ -26,7 +26,7 @@ namespace EInvLib.Models.EInv.v32.B2C.Allowance
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:GEINV:eInvoiceMessage:D0501:3.2")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:GEINV:eInvoiceMessage:D0501:3.2", IsNullable = false)]
-    [Table("D0501", Schema = "EInv")]
+    [Table("D0501")]
     public partial class CancelAllowance
     {
         [Key]

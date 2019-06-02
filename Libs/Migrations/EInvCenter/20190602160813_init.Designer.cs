@@ -7,11 +7,11 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace EInvCenter.Data.Migrations
+namespace Libs.Migrations.EInvCenter
 {
     [DbContext(typeof(EInvCenterContext))]
-    [Migration("20190531100933_Identity")]
-    partial class Identity
+    [Migration("20190602160813_init")]
+    partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -20,30 +20,6 @@ namespace EInvCenter.Data.Migrations
                 .HasAnnotation("ProductVersion", "2.2.4-servicing-10062")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-            modelBuilder.Entity("EInv.Models.EInv.v32.B2P.E0501.InvoiceAssignNo", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<string>("Ban");
-
-                    b.Property<string>("InvoiceBeginNo");
-
-                    b.Property<long>("InvoiceBooklet");
-
-                    b.Property<string>("InvoiceEndNo");
-
-                    b.Property<string>("InvoiceTrack");
-
-                    b.Property<int>("InvoiceType");
-
-                    b.Property<string>("YearMonth");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("E0501","EInv");
-                });
 
             modelBuilder.Entity("EInvLib.Models.EInvCenter.FlowOrder", b =>
                 {

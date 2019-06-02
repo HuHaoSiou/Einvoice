@@ -19,7 +19,7 @@ namespace EInvCenter.Data.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("EInv.Models.EInv.v32.B2P.E0501.InvoiceAssignNo", b =>
+            modelBuilder.Entity("EInvLib.Models.EInv.v32.B2P.E0501.InvoiceAssignNo", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd();

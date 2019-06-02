@@ -4,16 +4,14 @@ using EInvLib.DBContexts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace EInvLib.Migrations
+namespace Libs.Migrations
 {
-    [DbContext(typeof(Mig32ontext))]
-    [Migration("20190530023150_B2CInvoice")]
-    partial class B2CInvoice
+    [DbContext(typeof(Mig32Context))]
+    partial class Mig32ContextModelSnapshot : ModelSnapshot
     {
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -21,7 +19,7 @@ namespace EInvLib.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("EInv.Models.EInv.v32.B2C.Allowance.Allowance", b =>
+            modelBuilder.Entity("EInvLib.Models.EInv.v32.B2C.Allowance.Allowance", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd();
@@ -36,10 +34,10 @@ namespace EInvLib.Migrations
 
                     b.HasIndex("MainId");
 
-                    b.ToTable("D0401","EInv");
+                    b.ToTable("D0401");
                 });
 
-            modelBuilder.Entity("EInv.Models.EInv.v32.B2C.Allowance.Amount", b =>
+            modelBuilder.Entity("EInvLib.Models.EInv.v32.B2C.Allowance.Amount", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd();
@@ -50,10 +48,10 @@ namespace EInvLib.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("D0401_Amount","EInv");
+                    b.ToTable("D0401_Amount");
                 });
 
-            modelBuilder.Entity("EInv.Models.EInv.v32.B2C.Allowance.CancelAllowance", b =>
+            modelBuilder.Entity("EInvLib.Models.EInv.v32.B2C.Allowance.CancelAllowance", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd();
@@ -76,10 +74,10 @@ namespace EInvLib.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("D0501","EInv");
+                    b.ToTable("D0501");
                 });
 
-            modelBuilder.Entity("EInv.Models.EInv.v32.B2C.Allowance.DetailsProductItem", b =>
+            modelBuilder.Entity("EInvLib.Models.EInv.v32.B2C.Allowance.DetailsProductItem", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd();
@@ -112,10 +110,10 @@ namespace EInvLib.Migrations
 
                     b.HasIndex("AllowanceId");
 
-                    b.ToTable("D0401_DetailsProductItem","EInv");
+                    b.ToTable("D0401_DetailsProductItem");
                 });
 
-            modelBuilder.Entity("EInv.Models.EInv.v32.B2C.Allowance.Main", b =>
+            modelBuilder.Entity("EInvLib.Models.EInv.v32.B2C.Allowance.Main", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd();
@@ -138,10 +136,10 @@ namespace EInvLib.Migrations
 
                     b.HasIndex("SellerId");
 
-                    b.ToTable("D0401_Main","EInv");
+                    b.ToTable("D0401_Main");
                 });
 
-            modelBuilder.Entity("EInv.Models.EInv.v32.B2C.Allowance.MainBuyer", b =>
+            modelBuilder.Entity("EInvLib.Models.EInv.v32.B2C.Allowance.MainBuyer", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd();
@@ -166,10 +164,10 @@ namespace EInvLib.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("D0401_MainBuyer","EInv");
+                    b.ToTable("D0401_MainBuyer");
                 });
 
-            modelBuilder.Entity("EInv.Models.EInv.v32.B2C.Allowance.MainSeller", b =>
+            modelBuilder.Entity("EInvLib.Models.EInv.v32.B2C.Allowance.MainSeller", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd();
@@ -194,10 +192,10 @@ namespace EInvLib.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("D0401_MainSeller","EInv");
+                    b.ToTable("D0401_MainSeller");
                 });
 
-            modelBuilder.Entity("EInv.Models.EInv.v32.B2C.EInvoice.Amount", b =>
+            modelBuilder.Entity("EInvLib.Models.EInv.v32.B2C.EInvoice.Amount", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd();
@@ -234,10 +232,10 @@ namespace EInvLib.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("C0401_Amount","EInv");
+                    b.ToTable("C0401_Amount");
                 });
 
-            modelBuilder.Entity("EInv.Models.EInv.v32.B2C.EInvoice.CancelInvoice", b =>
+            modelBuilder.Entity("EInvLib.Models.EInv.v32.B2C.EInvoice.CancelInvoice", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd();
@@ -262,10 +260,10 @@ namespace EInvLib.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("C0501","EInv");
+                    b.ToTable("C0501");
                 });
 
-            modelBuilder.Entity("EInv.Models.EInv.v32.B2C.EInvoice.DetailsProductItem", b =>
+            modelBuilder.Entity("EInvLib.Models.EInv.v32.B2C.EInvoice.DetailsProductItem", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd();
@@ -292,10 +290,10 @@ namespace EInvLib.Migrations
 
                     b.HasIndex("InvoiceId");
 
-                    b.ToTable("C0401_DetailsProductItem","EInv");
+                    b.ToTable("C0401_DetailsProductItem");
                 });
 
-            modelBuilder.Entity("EInv.Models.EInv.v32.B2C.EInvoice.Invoice", b =>
+            modelBuilder.Entity("EInvLib.Models.EInv.v32.B2C.EInvoice.Invoice", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd();
@@ -310,10 +308,10 @@ namespace EInvLib.Migrations
 
                     b.HasIndex("MainId");
 
-                    b.ToTable("C0401","EInv");
+                    b.ToTable("C0401");
                 });
 
-            modelBuilder.Entity("EInv.Models.EInv.v32.B2C.EInvoice.Main", b =>
+            modelBuilder.Entity("EInvLib.Models.EInv.v32.B2C.EInvoice.Main", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd();
@@ -376,10 +374,10 @@ namespace EInvLib.Migrations
 
                     b.HasIndex("SellerId");
 
-                    b.ToTable("C0401_Main","EInv");
+                    b.ToTable("C0401_Main");
                 });
 
-            modelBuilder.Entity("EInv.Models.EInv.v32.B2C.EInvoice.MainBuyer", b =>
+            modelBuilder.Entity("EInvLib.Models.EInv.v32.B2C.EInvoice.MainBuyer", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd();
@@ -404,10 +402,10 @@ namespace EInvLib.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("C0401_MainBuyer","EInv");
+                    b.ToTable("C0401_MainBuyer");
                 });
 
-            modelBuilder.Entity("EInv.Models.EInv.v32.B2C.EInvoice.MainSeller", b =>
+            modelBuilder.Entity("EInvLib.Models.EInv.v32.B2C.EInvoice.MainSeller", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd();
@@ -432,10 +430,10 @@ namespace EInvLib.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("C0401_MainSeller","EInv");
+                    b.ToTable("C0401_MainSeller");
                 });
 
-            modelBuilder.Entity("EInv.Models.EInv.v32.B2C.EInvoice.VoidInvoice", b =>
+            modelBuilder.Entity("EInvLib.Models.EInv.v32.B2C.EInvoice.VoidInvoice", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd();
@@ -458,65 +456,227 @@ namespace EInvLib.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("C0701","EInv");
+                    b.ToTable("C0701");
                 });
 
-            modelBuilder.Entity("EInv.Models.EInv.v32.B2C.Allowance.Allowance", b =>
+            modelBuilder.Entity("EInvLib.Models.EInv.v32.B2P.E0401.BranchTrack", b =>
                 {
-                    b.HasOne("EInv.Models.EInv.v32.B2C.Allowance.Amount", "Amount")
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<Guid?>("MainId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MainId");
+
+                    b.ToTable("E0401");
+                });
+
+            modelBuilder.Entity("EInvLib.Models.EInv.v32.B2P.E0401.DetailsBranchTrackItem", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<Guid?>("BranchTrackId");
+
+                    b.Property<string>("InvoiceBeginNo");
+
+                    b.Property<long>("InvoiceBooklet");
+
+                    b.Property<string>("InvoiceEndNo");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BranchTrackId");
+
+                    b.ToTable("E0401_DetailsBranchTrackItem");
+                });
+
+            modelBuilder.Entity("EInvLib.Models.EInv.v32.B2P.E0401.Main", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("BranchBan");
+
+                    b.Property<string>("HeadBan");
+
+                    b.Property<string>("InvoiceBeginNo");
+
+                    b.Property<string>("InvoiceEndNo");
+
+                    b.Property<string>("InvoiceTrack");
+
+                    b.Property<int>("InvoiceType");
+
+                    b.Property<string>("YearMonth");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("E0401_Main");
+                });
+
+            modelBuilder.Entity("EInvLib.Models.EInv.v32.B2P.E0402.BranchTrackBlank", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<Guid?>("MainId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MainId");
+
+                    b.ToTable("E0402");
+                });
+
+            modelBuilder.Entity("EInvLib.Models.EInv.v32.B2P.E0402.DetailsBranchTrackBlankItem", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<Guid?>("BranchTrackBlankId");
+
+                    b.Property<string>("InvoiceBeginNo");
+
+                    b.Property<string>("InvoiceEndNo");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BranchTrackBlankId");
+
+                    b.ToTable("E0402_DetailsBranchTrackBlankItem");
+                });
+
+            modelBuilder.Entity("EInvLib.Models.EInv.v32.B2P.E0402.Main", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("BranchBan");
+
+                    b.Property<string>("HeadBan");
+
+                    b.Property<string>("InvoiceTrack");
+
+                    b.Property<int>("InvoiceType");
+
+                    b.Property<string>("YearMonth");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("E0402_Main");
+                });
+
+            modelBuilder.Entity("EInvLib.Models.EInv.v32.B2P.E0501.InvoiceAssignNo", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Ban");
+
+                    b.Property<string>("InvoiceBeginNo");
+
+                    b.Property<long>("InvoiceBooklet");
+
+                    b.Property<string>("InvoiceEndNo");
+
+                    b.Property<string>("InvoiceTrack");
+
+                    b.Property<int>("InvoiceType");
+
+                    b.Property<string>("YearMonth");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("E0501");
+                });
+
+            modelBuilder.Entity("EInvLib.Models.EInv.v32.B2C.Allowance.Allowance", b =>
+                {
+                    b.HasOne("EInvLib.Models.EInv.v32.B2C.Allowance.Amount", "Amount")
                         .WithMany()
                         .HasForeignKey("AmountId");
 
-                    b.HasOne("EInv.Models.EInv.v32.B2C.Allowance.Main", "Main")
+                    b.HasOne("EInvLib.Models.EInv.v32.B2C.Allowance.Main", "Main")
                         .WithMany()
                         .HasForeignKey("MainId");
                 });
 
-            modelBuilder.Entity("EInv.Models.EInv.v32.B2C.Allowance.DetailsProductItem", b =>
+            modelBuilder.Entity("EInvLib.Models.EInv.v32.B2C.Allowance.DetailsProductItem", b =>
                 {
-                    b.HasOne("EInv.Models.EInv.v32.B2C.Allowance.Allowance")
+                    b.HasOne("EInvLib.Models.EInv.v32.B2C.Allowance.Allowance")
                         .WithMany("Details")
                         .HasForeignKey("AllowanceId");
                 });
 
-            modelBuilder.Entity("EInv.Models.EInv.v32.B2C.Allowance.Main", b =>
+            modelBuilder.Entity("EInvLib.Models.EInv.v32.B2C.Allowance.Main", b =>
                 {
-                    b.HasOne("EInv.Models.EInv.v32.B2C.Allowance.MainBuyer", "Buyer")
+                    b.HasOne("EInvLib.Models.EInv.v32.B2C.Allowance.MainBuyer", "Buyer")
                         .WithMany()
                         .HasForeignKey("BuyerId");
 
-                    b.HasOne("EInv.Models.EInv.v32.B2C.Allowance.MainSeller", "Seller")
+                    b.HasOne("EInvLib.Models.EInv.v32.B2C.Allowance.MainSeller", "Seller")
                         .WithMany()
                         .HasForeignKey("SellerId");
                 });
 
-            modelBuilder.Entity("EInv.Models.EInv.v32.B2C.EInvoice.DetailsProductItem", b =>
+            modelBuilder.Entity("EInvLib.Models.EInv.v32.B2C.EInvoice.DetailsProductItem", b =>
                 {
-                    b.HasOne("EInv.Models.EInv.v32.B2C.EInvoice.Invoice")
+                    b.HasOne("EInvLib.Models.EInv.v32.B2C.EInvoice.Invoice")
                         .WithMany("Details")
                         .HasForeignKey("InvoiceId");
                 });
 
-            modelBuilder.Entity("EInv.Models.EInv.v32.B2C.EInvoice.Invoice", b =>
+            modelBuilder.Entity("EInvLib.Models.EInv.v32.B2C.EInvoice.Invoice", b =>
                 {
-                    b.HasOne("EInv.Models.EInv.v32.B2C.EInvoice.Amount", "Amount")
+                    b.HasOne("EInvLib.Models.EInv.v32.B2C.EInvoice.Amount", "Amount")
                         .WithMany()
                         .HasForeignKey("AmountId");
 
-                    b.HasOne("EInv.Models.EInv.v32.B2C.EInvoice.Main", "Main")
+                    b.HasOne("EInvLib.Models.EInv.v32.B2C.EInvoice.Main", "Main")
                         .WithMany()
                         .HasForeignKey("MainId");
                 });
 
-            modelBuilder.Entity("EInv.Models.EInv.v32.B2C.EInvoice.Main", b =>
+            modelBuilder.Entity("EInvLib.Models.EInv.v32.B2C.EInvoice.Main", b =>
                 {
-                    b.HasOne("EInv.Models.EInv.v32.B2C.EInvoice.MainBuyer", "Buyer")
+                    b.HasOne("EInvLib.Models.EInv.v32.B2C.EInvoice.MainBuyer", "Buyer")
                         .WithMany()
                         .HasForeignKey("BuyerId");
 
-                    b.HasOne("EInv.Models.EInv.v32.B2C.EInvoice.MainSeller", "Seller")
+                    b.HasOne("EInvLib.Models.EInv.v32.B2C.EInvoice.MainSeller", "Seller")
                         .WithMany()
                         .HasForeignKey("SellerId");
+                });
+
+            modelBuilder.Entity("EInvLib.Models.EInv.v32.B2P.E0401.BranchTrack", b =>
+                {
+                    b.HasOne("EInvLib.Models.EInv.v32.B2P.E0401.Main", "Main")
+                        .WithMany()
+                        .HasForeignKey("MainId");
+                });
+
+            modelBuilder.Entity("EInvLib.Models.EInv.v32.B2P.E0401.DetailsBranchTrackItem", b =>
+                {
+                    b.HasOne("EInvLib.Models.EInv.v32.B2P.E0401.BranchTrack")
+                        .WithMany("Details")
+                        .HasForeignKey("BranchTrackId");
+                });
+
+            modelBuilder.Entity("EInvLib.Models.EInv.v32.B2P.E0402.BranchTrackBlank", b =>
+                {
+                    b.HasOne("EInvLib.Models.EInv.v32.B2P.E0402.Main", "Main")
+                        .WithMany()
+                        .HasForeignKey("MainId");
+                });
+
+            modelBuilder.Entity("EInvLib.Models.EInv.v32.B2P.E0402.DetailsBranchTrackBlankItem", b =>
+                {
+                    b.HasOne("EInvLib.Models.EInv.v32.B2P.E0402.BranchTrackBlank")
+                        .WithMany("Details")
+                        .HasForeignKey("BranchTrackBlankId");
                 });
 #pragma warning restore 612, 618
         }

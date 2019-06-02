@@ -17,7 +17,7 @@ namespace EInvLib.DBContexts
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer(Configs.ConnString_EInvCenterContext, builder => builder.MigrationsAssembly("EInvCenter"));
+                optionsBuilder.UseSqlServer(Configs.ConnString_EInvCenterContext, builder => builder.MigrationsAssembly("Libs"));
             }
         }
         /// <summary>
@@ -25,13 +25,8 @@ namespace EInvLib.DBContexts
         /// </summary>
         public DbSet<FlowOrder> FlowOrders { get; set; }
         /// <summary>
-        /// 配號
-        /// </summary>
-        public DbSet<InvoiceAssignNo> InvoiceAssignNos { get; set; }
-        /// <summary>
         /// 營業人資訊
         /// </summary>
         public DbSet<SellerInfo> SellerInfos { get; set; }
-        //public DbSet<Member> Members { get; set; }
     }
 }

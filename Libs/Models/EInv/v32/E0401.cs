@@ -26,7 +26,7 @@ namespace EInvLib.Models.EInv.v32.B2P.E0401
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:GEINV:eInvoiceMessage:E0401:3.2")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:GEINV:eInvoiceMessage:E0401:3.2", IsNullable = false)]
-    [Table("E0401", Schema = "EInv")]
+    [Table("E0401")]
     public partial class BranchTrack
     {
         [Key]
@@ -69,7 +69,7 @@ namespace EInvLib.Models.EInv.v32.B2P.E0401
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:GEINV:eInvoiceMessage:E0401:3.2")]
-    [Table("E0401_Main", Schema = "EInv")]
+    [Table("E0401_Main")]
     public partial class Main
     {
         [Key]
@@ -227,7 +227,7 @@ namespace EInvLib.Models.EInv.v32.B2P.E0401
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:GEINV:eInvoiceMessage:E0401:3.2")]
-    [Table("E0401_DetailsBranchTrackItem", Schema = "EInv")]
+    [Table("E0401_DetailsBranchTrackItem")]
     public partial class DetailsBranchTrackItem
     {
         [Key]

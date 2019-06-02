@@ -26,7 +26,7 @@ namespace EInvLib.Models.EInv.v32.B2C.EInvoice
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:GEINV:eInvoiceMessage:C0401:3.2")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:GEINV:eInvoiceMessage:C0401:3.2", IsNullable = false)]
-    [Table("C0401", Schema = "EInv")]
+    [Table("C0401")]
     public partial class Invoice
     {
         [Key]
@@ -85,7 +85,7 @@ namespace EInvLib.Models.EInv.v32.B2C.EInvoice
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:GEINV:eInvoiceMessage:C0401:3.2")]
-    [Table("C0401_Main", Schema = "EInv")]
+    [Table("C0401_Main")]
     public partial class Main
     {
         [Key]
@@ -491,7 +491,7 @@ namespace EInvLib.Models.EInv.v32.B2C.EInvoice
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:GEINV:eInvoiceMessage:C0401:3.2")]
-    [Table("C0401_MainSeller", Schema = "EInv")]
+    [Table("C0401_MainSeller")]
     public partial class MainSeller
     {
         [Key]
@@ -639,7 +639,7 @@ namespace EInvLib.Models.EInv.v32.B2C.EInvoice
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:GEINV:eInvoiceMessage:C0401:3.2")]
-    [Table("C0401_Amount", Schema = "EInv")]
+    [Table("C0401_Amount")]
     public partial class Amount
     {
         [Key]
@@ -1427,7 +1427,7 @@ namespace EInvLib.Models.EInv.v32.B2C.EInvoice
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:GEINV:eInvoiceMessage:C0401:3.2")]
-    [Table("C0401_MainBuyer", Schema = "EInv")]
+    [Table("C0401_MainBuyer")]
     public partial class MainBuyer
     {
         [Key]
@@ -1671,7 +1671,7 @@ namespace EInvLib.Models.EInv.v32.B2C.EInvoice
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:GEINV:eInvoiceMessage:C0401:3.2")]
-    [Table("C0401_DetailsProductItem", Schema = "EInv")]
+    [Table("C0401_DetailsProductItem")]
     public partial class DetailsProductItem
     {
         [Key]

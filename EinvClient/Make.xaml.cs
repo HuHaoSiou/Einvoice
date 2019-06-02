@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EInvLib.DBContexts;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,9 +23,11 @@ namespace EinvClient
     /// </summary>
     public sealed partial class Make : Page
     {
+        protected EInvCenterContext _Context;
         public Make()
         {
             this.InitializeComponent();
+            this._Context = new EInvCenterContext();
         }
 
     }

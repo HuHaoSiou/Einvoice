@@ -26,7 +26,7 @@ namespace EInvLib.Models.EInv.v32.B2P.E0501
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = " urn:GEINV:E0501:3.1")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = " urn:GEINV:E0501:3.1", IsNullable = false)]
-    [Table("E0501", Schema = "EInv")]
+    [Table("E0501")]
     public partial class InvoiceAssignNo
     {
         [Key]

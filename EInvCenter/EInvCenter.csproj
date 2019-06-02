@@ -9,6 +9,12 @@
   <ItemGroup>
     <Compile Remove="Data\Migrations\20190531100338_Identity.cs" />
     <Compile Remove="Data\Migrations\20190531100338_Identity.Designer.cs" />
+    <Compile Remove="Data\Migrations\20190531100933_Identity.cs" />
+    <Compile Remove="Data\Migrations\20190531100933_Identity.Designer.cs" />
+    <Compile Remove="Data\Migrations\20190602151301_EInvoice.cs" />
+    <Compile Remove="Data\Migrations\20190602151301_EInvoice.Designer.cs" />
+    <Compile Remove="Data\Migrations\20190602154745_einv-b2c.cs" />
+    <Compile Remove="Data\Migrations\20190602154745_einv-b2c.Designer.cs" />
   </ItemGroup>
 
 
