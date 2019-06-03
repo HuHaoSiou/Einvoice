@@ -5,47 +5,155 @@
     xmlns:local="using:EinvClient"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:muxcontrols="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
 
         <NavigationView x:Name="MainNavi" ItemInvoked="NavigationView_ItemInvoked">
-            
+
             <NavigationView.MenuItems>
                 <AutoSuggestBox PlaceholderText="搜尋" QueryIcon="Find" Width="200"
                 TextChanged="AutoSuggestBox_TextChanged"
                 QuerySubmitted="AutoSuggestBox_QuerySubmitted"
                 SuggestionChosen="AutoSuggestBox_SuggestionChosen"
 />
-                
-                <NavigationViewItem x:Name="Make">
-                    <NavigationViewItem.Icon>
-                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE7C3;"/>
-                    </NavigationViewItem.Icon>
-                    <TextBlock Tag="Nav_Make">開立</TextBlock>
-                </NavigationViewItem>
+                <NavigationViewItem x:Name="Make" Icon="Page" Content="開立" Tag="Nav_Make"/>
+                <!--<NavigationViewItem x:Name="Sell" Icon="Page" Content="銷售" Tag="Nav_Sell"/>-->
+                <NavigationViewItemSeparator />
 
-                <NavigationViewItem x:Name="Cancel">
-                    <NavigationViewItem.Icon>
-                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE7C3;"/>
-                    </NavigationViewItem.Icon>
-                    <TextBlock Tag="Nav_Cancel">作廢</TextBlock>
-                </NavigationViewItem>
+                <NavigationViewItem x:Name="Void" Icon="Remove" Content="註銷" Tag="Nav_Void"/>
+                <NavigationViewItem x:Name="Cancel" Icon="Cancel" Content="作廢" Tag="Nav_Cancel"/>
 
-                <NavigationViewItem x:Name="Report">
-                    <NavigationViewItem.Icon>
-                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE7C3;"/>
-                    </NavigationViewItem.Icon>
-                    <TextBlock Tag="Nav_Report">報表</TextBlock>
-                </NavigationViewItem>
+                <NavigationViewItemSeparator />
+
+                <NavigationViewItem x:Name="Report" Icon="List" Content="報表統計" Tag="Nav_Report"/>
+                <NavigationViewItem x:Name="Analyze" Icon="Calculator" Content="數據分析" Tag="Nav_Analyze"/>
+
 
             </NavigationView.MenuItems>
+
             <NavigationView.PaneFooter>
-                <NavigationViewItem Icon="Contact" Tag="User">
-                </NavigationViewItem>
+                <ListView>
+                    <ListViewItem>
+                        CurrentUser
+                    </ListViewItem>
+                    <ListViewItem>
+                    </ListViewItem>
+                </ListView>
             </NavigationView.PaneFooter>
             <Frame x:Name="MainFrame"/>
         </NavigationView>
     </Grid>
+    <!--<Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <muxcontrols:NavigationView 
+                IsBackButtonVisible="Visible"
+                x:Name="NavView" AutomationProperties.Name="NavView" AutomationProperties.AutomationId="NavView"
+                Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+            <muxcontrols:NavigationView.MenuItems>
+                <muxcontrols:NavigationViewItem x:Name="HomeItem" Content="Home" Icon="Home" />
+                <muxcontrols:NavigationViewItem x:Name="AppsItem" Icon="Shop" Tag="Apps" />
+                <muxcontrols:NavigationViewItemSeparator />
+                <muxcontrols:NavigationViewItemHeader x:Name="HeaderTextItem" Content="Header Text" />
+                <muxcontrols:NavigationViewItem x:Name="MusicItem" Content="Music" Icon="Audio" />
+                <muxcontrols:NavigationViewItem x:Name="MoviesItem" Content="Movies" Icon="Video" />
+            </muxcontrols:NavigationView.MenuItems>
+            <muxcontrols:NavigationView.PaneHeader>
+                <Button x:Name="PaneHeader" Content="PaneHeader" HorizontalAlignment="Stretch" IsTabStop="False" />
+            </muxcontrols:NavigationView.PaneHeader>
+            <muxcontrols:NavigationView.PaneFooter>
+                <Button x:Name="PaneFooter" Content="PaneFooter" HorizontalAlignment="Stretch" IsTabStop="False" />
+            </muxcontrols:NavigationView.PaneFooter>
+            <muxcontrols:NavigationView.PaneCustomContent>
+                <Button x:Name="PaneCustomContent" Content="PaneCustomContent" HorizontalAlignment="Stretch" IsTabStop="False" />
+            </muxcontrols:NavigationView.PaneCustomContent>
+            <StackPanel>
+                <TextBlock>This is content</TextBlock>
+            </StackPanel>
+        </muxcontrols:NavigationView>
+    </Grid>-->
+
+
+    <!--<Grid>
+        <NavigationView x:Name="NavView"
+            AutomationProperties.Name="NavView"
+            AutomationProperties.AutomationId="NavView"
+            CompactModeThresholdWidth="480"
+            IsSettingsVisible="False"
+            IsPaneToggleButtonVisible="False"
+            AlwaysShowHeader="False"
+            Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+            IsBackButtonVisible="Visible"
+            PaneDisplayMode="Top"
+            ShoulderNavigationEnabled="WhenSelectionFollowsFocus"
+            ItemInvoked="OnNavItemInvoked">
+
+            <NavigationView.PaneHeader>
+                <CommandBar>
+                    <AppBarToggleButton Icon="Shuffle" Label="Shuffle" Click="AppBarButton_Click" />
+                    <CommandBar.SecondaryCommands>
+                        <AppBarButton Label="Like" Click="AppBarButton_Click"/>
+                    </CommandBar.SecondaryCommands>
+                </CommandBar>
+            </NavigationView.PaneHeader>
+
+            <NavigationView.PaneCustomContent>
+                <CommandBar>
+                    <AppBarToggleButton Icon="Like" Label="Like" Click="AppBarButton_Click" />
+                </CommandBar>
+            </NavigationView.PaneCustomContent>
+
+            <NavigationView.PaneFooter>
+                <CommandBar>
+                    <AppBarToggleButton Icon="Shuffle" Label="Shuffle" Click="AppBarButton_Click" />
+                    <AppBarToggleButton Icon="RepeatAll" Label="Repeat" Click="AppBarButton_Click"/>
+                    <AppBarSeparator/>
+                    <AppBarButton Icon="Play" Label="Play" Click="AppBarButton_Click"/>
+
+                    <CommandBar.SecondaryCommands>
+                        <AppBarButton Label="Like" Click="AppBarButton_Click"/>
+                        <AppBarButton Label="Dislike" Click="AppBarButton_Click"/>
+                    </CommandBar.SecondaryCommands>
+                </CommandBar>
+            </NavigationView.PaneFooter>
+
+            <NavigationView.AutoSuggestBox>
+                <AutoSuggestBox QueryIcon="Find" AutomationProperties.Name="PaneAutoSuggestBox"/>
+            </NavigationView.AutoSuggestBox>
+
+            <StackPanel Background="BurlyWood">
+                <ScrollViewer x:Name="ContentScrollViewer" VerticalAlignment="Top">
+                    <StackPanel x:Name="ContentStackPanel" Orientation="Vertical">
+                        <Button x:Name="MoveContentUnderTopnav" AutomationProperties.Name="MoveContentUnderTopnavButton" Content="Move/Remove content under Top nav + Scrollviewer checkup" Click="MoveContentUnderTopnav_Click"/>
+                        <Button x:Name="MoveContentUnderTopnavTitleBar" AutomationProperties.Name="MoveContentUnderTopnavTitleBarButton" Content="Move/Remove content under Top nav + Scrollviewer checkup + Titlebar take over" Click="MoveContentUnderTopnavTitleBar_Click"/>
+                        <Button x:Name="GetTopPaddingHeightButton" AutomationProperties.Name="GetTopPaddingHeightButton" Content="Get top padding height" Click="GetTopPaddingHeightButton_Click"/>
+                        <Button x:Name="AddItemButton" AutomationProperties.Name="AddItemButton" Content="Add Item" Click="AddButton_Click"/>
+                        <Button x:Name="AddItemSuppressSelectionButton" AutomationProperties.Name="AddItemSuppressSelectionButton" Content="Add Item with SupppressSelection" Click="AddButtonSuppressSelection_Click"/>
+                        <Button x:Name="RemoveItemButton" AutomationProperties.Name="RemoveItemButton" Content="Remove Item" Click="RemoveButton_Click"/>
+                        <Button x:Name="ChangeToIEnumerableButton" AutomationProperties.Name="ChangeToIEnumerableButton" Content="Make it IEnumerable" Click="ChangeToIEnumerableButton_Clicks"/>
+                        <Button x:Name="FlipOrientation" AutomationProperties.Name="FlipOrientationButton" Content="Flip Orientation" Click="FlipOrientation_Click"/>
+                        <Button x:Name="AddRemoveContentOverlay" AutomationProperties.Name="AddRemoveContentOverlayButton" Content="Add/Remove Content Overlay (top nav)" Click="AddRemoveContentOverlay_Click"/>
+                        <Button x:Name="ChangeContentOverlayVisibility" AutomationProperties.Name="ChangeContentOverlayVisibilityButton" Content="Change Content Overlay Visibility (top nav)" Click="ChangeContentOverlayVisibility_Click"/>
+                        <Button x:Name="ChangeTopNavVisibility" AutomationProperties.Name="ChangeTopNavVisibilityButton" Content="Change Top Nav Visibility" Click="ChangeTopNavVisibility_Click"/>
+                        <Button x:Name="ChangeSelectionInCode" AutomationProperties.Name="ChangeSelectionInCodeButton" Content="Change Selection In Code" Click="ChangeSelectionInCode_Click"/>
+                        <Button x:Name="EnableSelectionFollowsFocusButton" AutomationProperties.Name="EnableSelectionFollowsFocusButton" Content="Enable Selection Follows Focus" Click="EnableSelectionFollowsFocus_Click"/>
+                        <Button x:Name="GetActiveVisualState" AutomationProperties.Name="GetActiveVisualState" Content="Get Active VisualState" Click="GetActiveVisualState_Click" />
+                        <Button x:Name="GetNavItemActiveVisualState" AutomationProperties.Name="GetNavItemActiveVisualState" Content="Get Selected NavItem Active VisualState" Click="GetNavItemActiveNavItemVisualState_Click" />
+                        <Button x:Name="ClearItemInvokedTextButton" AutomationProperties.Name="ClearItemInvokedTextButton" Content="Clear Item Invoked Text" Click="ClearItemInvokedTextButton_Click" />
+                    </StackPanel>
+                </ScrollViewer>
+                <TextBlock Text="Active NavigationItem Visual States: "/>
+                <TextBlock x:Name="ActiveVisualStates" AutomationProperties.Name="ActiveVisualStates"/>
+                <TextBlock x:Name="NavItemActiveVisualStates" AutomationProperties.Name="NavItemActiveVisualStates"/>
+                <TextBlock Text="Top padding Height: "/>
+                <TextBlock x:Name="TopPaddingRenderedValue"/>
+                <TextBlock Text="TitleBar.IsVisible: "/>
+                <TextBlock x:Name="TitleBarIsVisible"/>
+                <TextBlock Text="Item invoked: "/>
+                <TextBlock x:Name="ItemInvokedText"/>
+            </StackPanel>
+        </NavigationView>
+    </Grid>-->
+    
 </Page>

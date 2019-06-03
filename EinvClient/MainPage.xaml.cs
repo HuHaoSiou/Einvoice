@@ -25,11 +25,12 @@ namespace EinvClient
         public MainPage()
         {
             this.InitializeComponent();
+
         }
 
         private void NavigationView_ItemInvoked(NavigationView sender, NavigationViewItemInvokedEventArgs args)
         {
-            TextBlock ItemContent = args.InvokedItem as TextBlock;
+            var ItemContent = args.InvokedItemContainer;
             if (ItemContent != null)
             {
                 switch (ItemContent.Tag)
@@ -48,28 +49,27 @@ namespace EinvClient
                         this.MainFrame.Navigate(typeof(Report));
                         this.MainNavi.Header = "報表";
                         break;
+                        //    }
+                        //}
                 }
+
             }
         }
-
-        private void AutoSuggestBox_TextChanged(AutoSuggestBox sender, AutoSuggestBoxTextChangedEventArgs args)
-        {
-
-        }
-
+        #region AutoSuggestBox
         private void AutoSuggestBox_SuggestionChosen(AutoSuggestBox sender, AutoSuggestBoxSuggestionChosenEventArgs args)
         {
-
+            throw new NotImplementedException();
         }
 
         private void AutoSuggestBox_QuerySubmitted(AutoSuggestBox sender, AutoSuggestBoxQuerySubmittedEventArgs args)
         {
-
+            throw new NotImplementedException();
         }
 
-        private void MainFrame_Navigated(object sender, NavigationEventArgs e)
+        private void AutoSuggestBox_TextChanged(AutoSuggestBox sender, AutoSuggestBoxTextChangedEventArgs args)
         {
-
+            throw new NotImplementedException();
         }
+        #endregion
     }
 }
