@@ -21,7 +21,7 @@ namespace EInvCenter.Controllers
 
         public IActionResult Query(string InvNo, string RndNo)
         {
-            var EInv = this._B2CContext.C0401_Invoices.Where(x => x.Main.InvoiceNumber == InvNo && x.Main.RandomNumber == RndNo);
+            var EInv = this._B2CContext.C0401_Invoices.Where(x => x.Main.InvoiceNumber == InvNo && x.Main.RandomNumber == RndNo).First();
             return View(EInv);
         }
     }

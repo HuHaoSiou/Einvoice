@@ -4,7 +4,7 @@ using System.IO;
 using System.Text;
 using System.Xml.Serialization;
 using EInvLib;
-namespace Libs.Services.EInvoice
+namespace EInvLib.Services.EInvoice
 {
     /// <summary>
     /// 用於產生MigXML檔

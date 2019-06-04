@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Libs.Services.EInvoice
+namespace EInvLib.Services.EInvoice
 {
     /// <summary>
     /// Mig B2B交換

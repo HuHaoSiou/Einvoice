@@ -37,6 +37,7 @@ namespace EInvCenter
             });
 
             services.AddDbContext<EInvCenterContext>();
+            services.AddDbContext<Mig32Context>();
             services.AddDefaultIdentity<IdentityUser>()
                 .AddDefaultUI(UIFramework.Bootstrap4)
                 .AddEntityFrameworkStores<EInvCenterContext>();

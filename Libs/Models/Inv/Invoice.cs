@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
 
-namespace Libs.Models.Inv
+namespace EinvLib.Models.Inv
 {
     /// <summary>
     /// 發票容器
